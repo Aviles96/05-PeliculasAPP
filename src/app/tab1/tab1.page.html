@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      MoviesDM
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+      <h3>Peliculas Recientes</h3>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-slidesshow-backdrop [peliculas]="peliculasRecientes">
+  </app-slidesshow-backdrop>
+
+  
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+      <h3>Cartelera</h3>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-slidesshow-poster [peliculas]="peliculasRecientes"></app-slidesshow-poster>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+      <h3>Populares</h3>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-slidesshow-pares [peliculas]="populares"
+                        (cargarMas)="cargarMas()"></app-slidesshow-pares>
+
+
+</ion-content>
